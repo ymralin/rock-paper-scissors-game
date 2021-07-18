@@ -5,7 +5,7 @@
         <title>Rock paper scissors</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="nromVerStyle.css">
+        <link rel="stylesheet" href="normVerStyle.css">
     </head>
     <body>
         <div id="mainContainer">
@@ -14,11 +14,12 @@
                 <div id="gameTextContainer">
                     <p>Choose wisely</p>
                 </div>
-                <div id="gameButtonsContainer">
-                    <button id="rockBtn" onclick="playerTurn('rock');cpuTurn();play();">ROCK</button>
-                    <button id="paperButton" onclick="playerTurn('paper');cpuTurn();play();">PAPER</button>
-                    <button id="scissorsButton" onclick="playerTurn('scissors');cpuTurn();play();">SCISSORS</button>
+                <div class="buttons">
+                    <div id="rock" class="btn">Rock</div>
+                    <div id="paper" class="btn">Paper</div>
+                    <div id="scissors" class="btn">Scissors</div>
                 </div>
+        
                 <div id="gameMessageContainer">
                     <p id="message1"></p>
                     <p id="message2"></p>

@@ -84,9 +84,11 @@ function play() {
     switch (roundResult) {
         case "cpu wins":
             scoreCPU++;
+            scoreBox.classList.add('scoreMinus')
             break;
         case "Player wins":
             scorePlayer++;
+            scoreBox.classList.add('scorePlus')
             break;
 
     }
@@ -95,4 +97,35 @@ function play() {
     document.getElementById("message1").textContent = message1;
     document.getElementById("message2").textContent = message2;
     document.getElementById("score").textContent = "CPU " + scoreCPU + " : " + scorePlayer + " Player"
+}
+
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => button.addEventListener('click', clicked))
+
+buttons.forEach(button => button.addEventListener('transitionend', removeTransition))
+
+function clicked() {
+    this.classList.add('clicked')
+    //console.log(this)
+    playerTurn(this.id);
+    cpuTurn();
+    play();
+}
+
+function removeTransition(e) {
+    if(e.propertyName !=='transform') return;
+    this.classList.remove('clicked')
+    
+    
+}
+
+const scoreBox = document.querySelector('#score');
+
+scoreBox.addEventListener('transitionend', removeScoreTransition)
+
+function removeScoreTransition(e) {
+    
+    if(e.propertyName !=='transform') return;
+    this.classList.remove('scoreMinus')
+    this.classList.remove('scorePlus')
 }

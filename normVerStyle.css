@@ -1,0 +1,70 @@
+h1 {
+    font-size: 1.5em;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    
+}
+
+#gameContainer {
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+#gameTextContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameMessageContainer {
+    text-align: center;
+}
+
+#scoreContainer {
+    text-align: center;
+}
+
+#score {
+    transition: all 0.15s ease;
+}
+
+.buttons {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin: 5px;
+    border: solid black 2px;
+    padding: 10px;
+    width: 5em;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.1s ease;
+}
+
+.clicked {
+    border: solid yellow 2px;
+    transform: scale(1.1)
+    
+}
+
+.scoreMinus {
+    transform: scale(1.1);
+    color: red;
+    font-weight: bold;
+}
+
+.scorePlus {
+    transform: scale(1.1);
+    color: green;
+    font-weight: bold;
+}
